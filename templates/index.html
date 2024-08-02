@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP21110010353</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Submit JSON Data</h1>
+    <textarea id="json-input" rows="10" cols="50"></textarea><br>
+    <button onclick="submitJson()">Submit</button>
+    <p id="error-message" style="color:red;"></p>
+
+    <div id="dropdown-container" style="display:none;">
+        <h2>Select Response Options</h2>
+        <select id="response-options" multiple>
+            <option value="alphabets">Alphabets</option>
+            <option value="numbers">Numbers</option>
+            <option value="highest-alphabet">Highest Alphabet</option>
+        </select>
+    </div>
+
+    <div id="response-container"></div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
